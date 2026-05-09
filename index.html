@@ -109,7 +109,7 @@
 
     <div class="tabs" id="portfolioTabs">
       <button class="tab active" data-cat="all">ALL</button>
-      <button class="tab active" data-cat="mobile">Mobile App</button>
+      <button class="tab" data-cat="mobile">Mobile App</button>
       <button class="tab" data-cat="web">Web Development</button>
       <button class="tab" data-cat="ui">UI/UX Design</button>
     </div>
@@ -177,14 +177,19 @@
           <a href="https://www.linkedin.com/in/nuha-alhadad-2782ab378/"><i class="fa-brands fa-linkedin-in"></i></a>
         </div>
       </div>
-      <form class="contact-form" id="contactForm">
-        <div class="row">
-          <input type="text" placeholder="Full Name" required>
-          <input type="tel" placeholder="Phone Number">
-        </div>
-        <input type="email" placeholder="Email Address" required>
-        <input type="text" placeholder="Subject">
-        <textarea placeholder="Message" rows="5"></textarea>
+     <form class="contact-form" id="contactForm" action="https://formsubmit.co/el/covesa" method="POST">
+       
+       <input type="hidden" name="_captcha" value="false">
+       <input type="hidden" name="_template" value="table">
+       <input type="hidden" name="_subject" value="رسالة جديدة من موقع نهى!">
+       
+       <div class="row">
+         <input type="text" name="name" placeholder="Full Name" required>
+        <input type="tel" name="phone" placeholder="Phone Number">
+       </div>
+          <input type="email" name="email" placeholder="Email Address" required>
+          <input type="text" name="subject" placeholder="Subject">
+          <textarea name="message" placeholder="Message" rows="5"></textarea>
         <button type="submit" class="btn btn-primary send-btn">SEND MESSAGE</button>
       </form>
     </div>
